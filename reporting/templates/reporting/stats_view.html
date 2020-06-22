@@ -1,0 +1,88 @@
+{% extends "inventory/base.html" %}
+{% block content %}
+  <main class="container">
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h2 id="reporting_page_title" class="text-left mb-4">Damage Statistics</h2>
+      </div>
+    </div>
+  </main>
+  <main role="main" class="container">
+    <div class="row border-solid mt-40">
+        <div class="col-12"
+          <legend></legend>
+          <div class="content-section">
+            <h5 class="mb-4"><u>By Model/Brand</u></h5>
+            <div>
+              {% load chart_tags %}
+              {% chart %}
+                   chxt=y,x
+                   chxr=0,0,10
+                   chds=0,10
+                   chxl=1:{{ Model_Brand_Frequency_Bar_x_labels }}
+                   chbh=a
+                   chs=440x220
+                   cht=bvg
+                   chco=4D89F9
+                   chma=30,30,30,30
+                   chd=t:{{ Model_Brand_Frequency_Bar_y_data|join:',' }}
+                   chtt=All+Damage+Reports+by+Number+of+Reports|and+Model/Brand
+              {% endchart %}
+            </div>
+          </div>
+          <hr>
+          <!--
+          <div class="content-section">
+            <h5 class="mb-2"><u>By Equipment Type</u></h5>
+            <div class="dropdown mb-2">
+              <select id="equipment_dropdown"  class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                {% for items in equipment %}
+                <option class="dropdown-item" value="{{ items }}">{{ items }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div>
+              {% for items in equipment %}
+              <div id="{{ items }}" class="equipment_stats">
+                {% load chart_tags %}
+                {% chart %}
+                     chxt=y,x
+                     chxr=0,0,10
+                     chds=0,10
+                     chxl=1:{{ Model_Brand_Frequency_Bar_x_labels }}
+                     chbh=a
+                     chs=440x220
+                     cht=bvg
+                     chco=4D89F9
+                     chma=30,30,30,30
+                     chd=t:{{ Model_Brand_Frequency_Bar_y_data|join:',' }}
+                     chtt=Damage+Reports+by+Number+of+Reports|and+{{ items }}+Types
+                {% endchart %}
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          <hr>
+        -->
+          <div class="content-section">
+            <h5 class="mb-4"><u>By Report Reason</u></h5>
+            <div>
+              {% load chart_tags %}
+              {% chart %}
+                   chds=0,100
+                   chl={{ Reason_Pie_Chart_x_labels }}
+                   chdl={{ Reason_Pie_Chart_y_labels }}
+                   chbh=a
+                   chs=440x220
+                   cht=p3
+                   chco=4D89F9
+                   chma=30,30,30,30
+                   chd=t:{{ Reason_Pie_Chart_y_data|join:',' }}
+                   chtt=All+Damage+Reports+by+Number+of+Reports|and+Reason+For+Report
+              {% endchart %}
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+{% endblock content %}

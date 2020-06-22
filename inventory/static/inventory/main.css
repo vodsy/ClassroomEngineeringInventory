@@ -1,0 +1,154 @@
+
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+ul {
+  margin: 0;
+}
+
+.bg-steel {
+  background-color: #003399;
+}
+
+.site-header .navbar-brand {
+  color: #ffd200;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.legend {
+  font-size: 24;
+}
+
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+
+table {
+    border-collapse: collapse;
+    margin: 12px 0 0 0;
+    width: 100%;
+}
+th {
+    padding: .6em 1em;
+    font-weight: bold;
+    color: white;
+}
+td {
+    padding: .3em 1em;
+    align : left;
+    valign : top;
+}
+
+
+#table_rows {
+  cursor:pointer !important;
+}
+
+#table_rows:hover {
+  background-color: #FAEBD7 !important;
+}
+
+#feed_text {
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+}
+
+#feed_section {
+  height: 200px;
+  overflow-y: auto;
+}
+
+#feed_lists {
+  font-size: 12px !important;
+}
+
+#notifications_detail_feed {
+  height: 400px;
+  overflow-y: auto;
+}
+
+#reportingTable {
+  height: 500px;
+  overflow-y: auto;
+}
+
+#reportingList {
+  height: 500px;
+  overflow-y: auto;
+}
+
+#header_title {
+  text-decoration: underline;
+  font-family: Times, serif;
+  font-size: 36px;
+}
+
+#min_table_title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: serif;
+  font-size: 30px;
+  border-bottom: 1px solid;
+  padding: 0 0 4px;
+  border-bottom-left-radius: 8px;
+}
+
+#reporting_page_title {
+  margin-top: 30px;
+  font-family: serif;
+  font-size: 30px;
+  border-bottom: 1px solid;
+  padding: 0 0 4px;
+  border-bottom-left-radius: 8px;
+}
+
+#full_table_title {
+  margin-top: 30px;
+  font-family: serif;
+  font-size: 30px;
+  border-bottom: 1px solid;
+  padding: 0 0 4px;
+  border-bottom-left-radius: 8px;
+}
+
+#instructional_development_tag {
+  font-family: serif;
+  font-size: 14px;
+}
+
+.dropdown-menu {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+
+
+
+
+

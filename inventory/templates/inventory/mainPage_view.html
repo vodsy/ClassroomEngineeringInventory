@@ -1,0 +1,88 @@
+{% extends "inventory/base.html" %}
+{% block content %}
+  {% if user.is_authenticated %}
+    <main class="container">
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h2 id="min_table_title" class="text-left">Overview</h2>
+        </div>
+      </div>
+    </main>
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-lg-8"
+          <legend></legend>
+          <table id="minimalTable" class="table dataTable table-striped table-bordered" style="width:100%">
+            <thead class="thead-light">
+              <tr>
+                <th>Category</th>
+                <th>Equipment</th>
+                <th>Model/Brand</th>
+                <th>In Stock</th>
+                <th>Keep In Stock</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for items in minimalTable %}
+                <tr id="table_rows" class="clickable-row" data-href="{% url 'item-detail-view' items.id %}">
+                  <td>{{ items.get_category_display }}</td>
+                  <td>{{ items.get_equipment_display }}</td>
+                  <td>{{ items.model_brand }}</td>
+                  <td>{{ items.in_stock }}</td>
+                  <td>{{ items.keep_in_stock }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <div class="col-lg-4">
+          <div class="content-section">
+            <a id="feed_text" class="btn btn-outline-* btn-lg mb-2 ml-4" href="{% url 'notification-detail-view' %}">
+                Notifications
+            </a>
+              <ul id="feed_section" class="border-solid list-group">
+                {% for items in minimalTable %}
+                  {% if items.in_stock <= 2 %}
+                    <li id="feed_lists" class="list-group-item list-group-item-light">
+                      Warning! You are running low on {{ items.get_equipment_display.lower }}: {{ items.model_brand }}
+                      <br>Quantity in stock: {{ items.in_stock }}
+                    </a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </p>
+          </div>
+          <div class="content-section">
+            <a id="feed_text" class="btn btn-outline-* btn-lg mb-2 ml-4" href="{% url 'reporting-detail' %}">
+                Damage Reports
+            </a>
+              <ul id="feed_section" class="border-solid list-group">
+                {% for updates in reporting %}
+                    <li id="feed_lists" class="list-group-item list-group-item-light">
+                      {{ updates.history_date }} {{ updates.history_user }} reported {{ updates.model_brand }} as {{ updates.get_reason_display.lower }}
+                    </a>
+                    </li>
+                {% endfor %}
+              </ul>
+            </p>
+          </div>
+          <div class="content-section">
+            <a id="feed_text" class="btn btn-outline-* btn-lg mb-2 ml-4" href="{% url 'history-detail-view' %}">
+                Inventory Updates Feed
+            </a>
+              <ul id="feed_section" class="border-solid list-group">
+                {% for updates in history %}
+                    <li id="feed_lists" class="list-group-item list-group-item-light">
+                      {{ updates.history_date }} {{ updates.history_user }} updated {{ updates.model_brand }}
+                    </a>
+                    </li>
+                {% endfor %}
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  {% endif %}
+{% endblock content %}

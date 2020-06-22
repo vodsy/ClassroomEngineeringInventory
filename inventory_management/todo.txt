@@ -1,0 +1,9 @@
+-Figure out reporting form choices
+    -Is equipment category necessary?
+-Add more graphs and graph functionality
+    -Ability to select dates
+    -Chart for each type of equipment and damage report amount for each model_brand within equipment type
+    -Do by frequency and by percentage
+        -May need to add column for quantity deployed??
+-Add styling to stats page
+-Make files for equipment types to avoid long lists in py files

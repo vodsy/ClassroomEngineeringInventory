@@ -1,0 +1,22 @@
+{% extends "inventory/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container mr-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class = "content-section">
+                    <form method = "POST">
+                        {% csrf_token %}
+                        <fieldset class = "form-group">
+                            <legend class = "border-bottom mb-4">Add a new item to inventory:</legend>
+                            {{ form | crispy }}
+                        </fieldset>
+                        <div class = "form-group">
+                            <button class = "btn btn-outline-info" type = "submit">Add New Item</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

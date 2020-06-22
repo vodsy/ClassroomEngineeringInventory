@@ -1,0 +1,20 @@
+{% extends "inventory/base.html" %}
+{% block content %}
+  <main id="history_detail" role="main" class="container">
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h2 id="min_table_title" class="text-left">{{ detail.model_brand}}</h2>
+        </div>
+      </div>
+      <div class="row border-solid mt-40">
+        <div class="col-lg-10"
+          <div class="content-section border-solid">
+            <ul>
+                <li class="list-group-item list-group-item">
+                      Category: {{ detail.get_category_display }}<br>Equipment: {{ detail.get_equipment_display }}<br>Model/Brand: {{detail.model_brand}}<br>
+                      In Stock: {{ detail.in_stock }}<br>Keep In Stock: {{ detail.keep_in_stock }}<br>Price: ${{ detail.price }}<br>
+                      Relevant Link: <a onclick="window.open(this.href,'_blank');return false;" href="{{ detail.relevant_link }}">{{ detail.relevant_link }}</a>
+                </li>
+            </ul>
+          </div>
+{% endblock content %}

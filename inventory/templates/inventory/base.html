@@ -1,0 +1,131 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/dataTables.bootstrap4.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+
+    <!-- plotly -->
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'inventory/main.css' %}">
+
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+
+    <title></title>
+
+</head>
+<body>
+
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <a id="header_title" class="navbar-brand mr-4" href="{% url 'home' %}">Classroom Engineering</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              {% if user.is_authenticated %}
+                <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+                <a class="nav-item nav-link" href="{% url 'detail-view' %}">Edit Inventory</a>
+                <a class="nav-item nav-link" href="{% url 'reporting-main' %}">Reporting</a>
+               {% else %}
+                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+              {% endif %}
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              {% if user.is_authenticated %}
+                <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    {% block content %}{% endblock %}
+
+
+
+
+    <!--JS for Datatables-->
+    <script type="text/javaScript">
+      $(document).ready(function() {
+        $('#minimalTable').DataTable({
+            select: true,
+            deferRender: true,
+            scrollY: 500,
+            scroller: true,
+            "paging": false,
+            "searching": true
+          });
+      });
+    </script>
+
+    <script type="text/javaScript">
+      $(document).ready(function() {
+        $('#fullTable').DataTable({
+            select: true,
+            deferRender: true,
+            scrollY: 500,
+            scroller: true,
+            "paging": false,
+            "searching": true
+        });
+      } );
+    </script>
+
+    <!--Make rows clickable-->
+    <script>
+      jQuery(document).ready(function($) {
+        $(".clickable-row").click(function() {
+          window.location = $(this).data("href");
+        });
+      });
+    </script>
+
+    <!-- Equipment stats logic -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        //hides dropdown content
+        $(".equipment_stats").hide();
+
+        //unhides first option content
+        $("#other").show();
+
+        //listen to dropdown for change
+        $("#equipment_dropdown").change(function(){
+          //rehide content on change
+          $('.equipment_stats').hide();
+          //unhides current item
+          $('#'+$(this).val()).show();
+        });
+
+      });
+    </script>
+
+</body>
+</html>

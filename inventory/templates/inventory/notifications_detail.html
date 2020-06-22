@@ -1,0 +1,28 @@
+{% extends "inventory/base.html" %}
+{% block content %}
+  <main id="history_detail" role="main" class="container">
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h2 id="min_table_title" class="text-left">Notifications</h2>
+        </div>
+      </div>
+      <div class="row border-solid mt-40">
+        <div class="col-lg-8">
+          <div class="content-section">
+              <ul id="notifications_detail_feed" class="border-solid list-group">
+                {% for items in minimalTable %}
+                  {% if items.in_stock <= 2 %}
+                    <li class="list-group-item list-group-item">
+                      Warning! You are running low on {{ items.get_equipment_display.lower }}: {{ items.model_brand }}
+                      <br>Consider placing an order soon.<br>Quantity in stock: {{ items.in_stock }}
+                      <br>Link: <a onclick="window.open(this.href,'_blank');return false;" href="{{ items.relevant_link }}">{{ items.relevant_link }}</a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+{% endblock content %}

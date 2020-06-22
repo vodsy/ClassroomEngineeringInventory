@@ -1,0 +1,49 @@
+{% extends "inventory/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+  {% if user.is_authenticated %}
+    <main class="container">
+      <div class="row mt-4 mb-4">
+        <div class="col-md-6">
+          <h1 id="reporting_page_title" class="text-left">Reporting Overview</h1>
+          <a class="btn btn-sm btn-outline-secondary" href="{% url 'reporting-stats' %}">See the Data</a>
+        </div>
+      </div>
+    </main>
+    <main role="main" class="container">
+      <div class="row border-solid">
+        <div class="col-4 mt-40">
+            <div class = "content-section">
+                <form method = "POST">
+                    {% csrf_token %}
+                    <fieldset class = "form-group">
+                        <legend class = "border-bottom mb-4">Submit a Report</legend>
+                        {{ form | crispy }}
+                    </fieldset>
+                    <div class = "form-group">
+                        <button class = "btn btn-outline-info" type = "submit">Submit Report</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-8 mt-40"
+          <legend></legend>
+          <div class="content-section">
+              <a id="damage_reports_feed_text" class="btn btn-outline-* btn-lg mb-2 ml-4" href="{% url 'reporting-detail' %}">
+                 Damage Reports
+              </a>
+              <ul id="reportingList" class="border-solid list-group">
+                {% for items in reportingTable %}
+                    <li class="list-group-item list-group-item">
+                      {{ items.history_date }} - {{ items.history_user }} submitted a damage report for {{ items.get_model_brand_display }}:
+                      <br>Category: {{ items.category }}<br>Equipment: {{ items.get_equipment_display }}<br>Model/Brand: {{ items.model_brand }}<br>
+                      Reason: {{ items.get_reason_display }}<br>Comments: {{ items.comments }}
+                    </li>
+                {% endfor %}
+              </ul>
+            </p>
+          </div>
+      </div>
+    </main>
+  {% endif %}
+{% endblock content %}

@@ -1,0 +1,212 @@
+[
+  {
+    "category": "EX",
+    "equipment": "Switcher",
+    "model_brand": "IN1606",
+    "quantity_deployed": 5,
+    "keep_in_stock": 5,
+    "in_stock": 3,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "LE",
+    "equipment": "Thing",
+    "model_brand": "Something 9",
+    "quantity_deployed": 14,
+    "keep_in_stock": 14,
+    "in_stock": 3,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "AM",
+    "equipment": "Thing 2",
+    "model_brand": "Something 8",
+    "quantity_deployed": 13,
+    "keep_in_stock": 14,
+    "in_stock": 4,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "SP",
+    "equipment": "Thing 3",
+    "model_brand": "Something 7",
+    "quantity_deployed": 12,
+    "keep_in_stock": 14,
+    "in_stock": 5,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "MO",
+    "equipment": "Thing 4",
+    "model_brand": "Something 6",
+    "quantity_deployed": 11,
+    "keep_in_stock": 14,
+    "in_stock": 6,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "EX",
+    "equipment": "Thing 5",
+    "model_brand": "Something 5",
+    "quantity_deployed": 10,
+    "keep_in_stock": 14,
+    "in_stock": 7,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "CA",
+    "equipment": "Thing 6",
+    "model_brand": "Something 4",
+    "quantity_deployed": 9,
+    "keep_in_stock": 14,
+    "in_stock": 8,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "EX",
+    "equipment": "Thing 7",
+    "model_brand": "Something 3",
+    "quantity_deployed": 8,
+    "keep_in_stock": 14,
+    "in_stock": 9,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "EX",
+    "equipment": "Thing 8",
+    "model_brand": "Something 2",
+    "quantity_deployed": 7,
+    "keep_in_stock": 14,
+    "in_stock": 10,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "EX",
+    "equipment": "Thing 9",
+    "model_brand": "Something 1",
+    "quantity_deployed": 6,
+    "keep_in_stock": 14,
+    "in_stock": 11,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "EX",
+    "equipment": "Thing 9",
+    "model_brand": "Something 1",
+    "quantity_deployed": 6,
+    "keep_in_stock": 14,
+    "in_stock": 11,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "EX",
+    "equipment": "Thing 9",
+    "model_brand": "Something 1",
+    "quantity_deployed": 6,
+    "keep_in_stock": 14,
+    "in_stock": 11,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "EX",
+    "equipment": "Thing 9",
+    "model_brand": "Something 1",
+    "quantity_deployed": 6,
+    "keep_in_stock": 14,
+    "in_stock": 11,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "EX",
+    "equipment": "Thing 9",
+    "model_brand": "Something 1",
+    "quantity_deployed": 6,
+    "keep_in_stock": 14,
+    "in_stock": 11,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "EX",
+    "equipment": "Thing 9",
+    "model_brand": "Something 1",
+    "quantity_deployed": 6,
+    "keep_in_stock": 14,
+    "in_stock": 11,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "EX",
+    "equipment": "Thing 9",
+    "model_brand": "Something 1",
+    "quantity_deployed": 6,
+    "keep_in_stock": 14,
+    "in_stock": 11,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "EX",
+    "equipment": "Thing 9",
+    "model_brand": "Something 1",
+    "quantity_deployed": 6,
+    "keep_in_stock": 14,
+    "in_stock": 11,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "EX",
+    "equipment": "Thing 9",
+    "model_brand": "Something 1",
+    "quantity_deployed": 6,
+    "keep_in_stock": 14,
+    "in_stock": 11,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "EX",
+    "equipment": "Thing 9",
+    "model_brand": "Something 1",
+    "quantity_deployed": 6,
+    "keep_in_stock": 14,
+    "in_stock": 11,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+  {
+    "category": "EX",
+    "equipment": "Thing 9",
+    "model_brand": "Something 1",
+    "quantity_deployed": 6,
+    "keep_in_stock": 14,
+    "in_stock": 11,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  },
+{
+    "category": "EX",
+    "equipment": "Thing 9",
+    "model_brand": "Something 1",
+    "quantity_deployed": 6,
+    "keep_in_stock": 14,
+    "in_stock": 11,
+    "price": 35.50,
+    "relevent_link": "www.madebyjonhandy.com"
+  }
+]

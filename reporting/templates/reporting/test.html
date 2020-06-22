@@ -1,0 +1,40 @@
+{% extends "inventory/base.html" %}
+{% block content %}
+  <main class="container">
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h2 id="reporting_page_title" class="text-left">Test</h2>
+      </div>
+    </div>
+  </main>
+  <main>
+    <div>
+      {{ master_dict }}
+    </div>
+    <div>
+      {{ x_data }}
+    </div>
+    <div>
+      {{ x_labels }}
+    </div>
+    <div>
+      {{ y_data }}
+    </div>
+    <div>
+      {% load chart_tags %}
+      {% chart %}
+           chxt=y,x
+           chxr=0,0,10
+           chds=0,10
+           chxl=1:{{ x_data }}
+           chbh=a
+           chs=600x300
+           cht=bvg
+           chco=4D89F9
+           chma=30,30,30,30
+           chd=t:{{ y_data }}
+           chtt=All+Damage+Reports+by+Number+of+Reports|and+Model/Brand
+      {% endchart %}
+     </div>
+  </main>
+{% endblock content %}

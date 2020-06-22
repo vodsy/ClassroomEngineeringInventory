@@ -1,0 +1,26 @@
+{% extends "inventory/base.html" %}
+{% block content %}
+  <main class="container">
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h2 id="min_table_title" class="text-left">Damage Reports</h2>
+        </div>
+      </div>
+    </main>
+  <main id="damage_reports_detail" role="main" class="container">
+      <div class="row border-solid mt-40">
+        <div class="col-12"
+          <legend></legend>
+          <div class="content-section">
+              <ul id="reportingTable" class="border-solid list-group">
+                {% for items in reportingTable %}
+                    <li class="list-group-item list-group-item">
+                      {{ items.history_date }} - {{ items.history_user }} submitted a damage report for {{ items.model_brand }}:
+                      <br>Category: {{ items.category }}<br>Equipment: {{ items.get_equipment_display }}<br>Model/Brand: {{ items.model_brand }}<br>
+                      Reason: {{ items.get_reason_display }}<br>Comments: {{ items.comments }}
+                    </li>
+                {% endfor %}
+              </ul>
+            </p>
+          </div>
+{% endblock content %}
