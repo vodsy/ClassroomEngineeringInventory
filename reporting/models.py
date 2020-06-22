@@ -64,20 +64,6 @@ class ReportingData(models.Model):
         ]
 
     """
-    working_data_set = InventoryData.objects.all()
-    counter = [i for i in range(len(working_data_set))]
-    #equipment_choices = [(str(item.equipment[:2]), str(item.equipment)) for item in working_data_set]
-    #equipment_choices = list(set(equipment_choices)) #remove duplicates
-
-
-
-    NEED TO FIND DIFFERENT WAY TO MAKE KEYS!!!!
-
-    model_brand_choices = [(str(item.model_brand[:2]), str(item.model_brand)) for item in working_data_set]
-    model_brand_choices = list(set(model_brand_choices)) #remove duplicates
-    """
-
-    """
     NEED TO TAKE INPUT FOR MODEL_BRAND AND JUST CLEAN IT
     """
 
