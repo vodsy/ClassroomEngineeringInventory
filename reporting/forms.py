@@ -15,7 +15,7 @@ class ReportForm(forms.ModelForm):
             ]
 
     """
-    FIGURE OUT HOW TO CLEAN INPUT
+    FIXME: FIGURE OUT HOW TO CLEAN INPUT BETTER
     """
 
     def __clean__(self):
