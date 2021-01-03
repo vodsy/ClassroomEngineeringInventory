@@ -133,7 +133,6 @@ class Equipment_Stats():
         x_data = ""
 
         for i in master_keys:
-            #x_data.append('|')
             for k in i:
                 x_data += ("|" + str(k))
         x_data = x_data.replace(" ", "+")
